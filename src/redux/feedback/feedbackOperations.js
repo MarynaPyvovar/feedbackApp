@@ -6,9 +6,8 @@ export const sendUserFeedback = createAsyncThunk(
   'feedback',
   async (data, { rejectWithValue }) => {
     try {
-      const result = await postFeedback(data);
+      await postFeedback(data);
       toast.success('Successfully sent!');
-      return result;
     } catch ({ response }) {
       const error = {
         status: response.status,
