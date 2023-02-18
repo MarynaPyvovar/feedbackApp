@@ -16,16 +16,16 @@ function Feedback() {
   return (
     <>
       {isLoading && <LoaderRoute />}
-      {feedback.length > 0 && !isLoading ?
+      {!isLoading && feedback.length === 0  && <StyledHeading>
+            Nothing to read for now, so your feedback can be the first one!
+          </StyledHeading>}
+      {!isLoading && feedback.length > 0 &&
         <StyledList>{feedback.map(({ id, name, email, message }) =>
           <li key={id}>
             <StyledHeading>{name}, {email}:</StyledHeading>
             <StyledMessage>{message}</StyledMessage>
           </li>)}
-        </StyledList> :
-          <StyledHeading>
-            Nothing to read for now, so your feedback can be the first one!
-          </StyledHeading>
+        </StyledList>
       }
     </>)
 }

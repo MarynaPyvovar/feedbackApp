@@ -3,7 +3,7 @@ import { Outlet } from 'react-router-dom';
 import { Footer, LoaderRoute } from 'components';
 import { Wrapper, YellowDownDecorBall, DecorMap, PinkDecorBall, YellowUpDecorBall, Cloud1, YellowTransparentBall, Cloud2,  Cloud3, Cloud4, Cloud5, Cloud6, Cloud7} from './SharedLayout.styled';
 
-function SharedLayout({children}) {
+function SharedLayout() {
   return (
     <>
     <Wrapper>
