@@ -14,7 +14,7 @@ function Feedback() {
 
   return (
     <ul>
-      {feedback.lenght > 0 ?
+      {feedback.length > 0 ?
           feedback.map(({ id, name, email, message }) => <li key={id}>
             <StyledHeading>{name}, {email}:</StyledHeading>
             <StyledMessage>{message}</StyledMessage>

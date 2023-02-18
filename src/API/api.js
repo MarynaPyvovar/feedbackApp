@@ -11,6 +11,6 @@ export async function postFeedback(req) {
 }
 
 export async function getFeedback() {
-  const res = await instance.get(`/feedback`);
-  return res;
+  const { data } = await instance.get(`/feedback`);
+  return data;
 }
