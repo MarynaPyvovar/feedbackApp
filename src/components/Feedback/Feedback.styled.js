@@ -1,5 +1,9 @@
 import styled from 'styled-components';
 
+export const StyledList = styled.ul`
+  max-width: 560px;
+`;
+
 export const StyledHeading = styled.p`
   color: ${({ theme }) => `${theme.colors.title}`};
   font-weight: bold;

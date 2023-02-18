@@ -3,7 +3,7 @@ import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { getAllFeedback } from 'redux/feedback/feedbackOperations';
 import { getFeed } from 'redux/feedback/feedbackSelector';
-import { StyledHeading, StyledMessage } from './Feedback.styled';
+import { StyledList, StyledHeading, StyledMessage } from './Feedback.styled';
 
 function Feedback() {
     const dispatch = useDispatch();
@@ -14,19 +14,20 @@ function Feedback() {
     }, [dispatch])
 
   return (
-    <ul>
-      {isLoading ?
-        <LoaderRoute /> :
-        feedback.length > 0 ?
-          feedback.map(({ id, name, email, message }) => <li key={id}>
+    <>
+      {isLoading && <LoaderRoute />}
+      {feedback.length > 0 && !isLoading ?
+        <StyledList>{feedback.map(({ id, name, email, message }) =>
+          <li key={id}>
             <StyledHeading>{name}, {email}:</StyledHeading>
             <StyledMessage>{message}</StyledMessage>
-          </li>) :
-        <StyledHeading>
-          Nothing to read for now, so your feedback can be the first one!
-        </StyledHeading>}
-    </ul>
-  )
+          </li>)}
+        </StyledList> :
+          <StyledHeading>
+            Nothing to read for now, so your feedback can be the first one!
+          </StyledHeading>
+      }
+    </>)
 }
 
 export default Feedback
