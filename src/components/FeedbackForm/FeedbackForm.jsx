@@ -5,13 +5,17 @@ import { Button } from '../Button';
 import { useDispatch } from 'react-redux';
 import { sendUserFeedback } from '../../redux/feedback/feedbackOperations';
 import { StyledForm, ErrorText, Wrapper, StyledInput, StyledMessage } from './FeedbackForm.styled';
+import { useNavigate } from 'react-router-dom';
 
 const schema = yup.object().shape({
   name: yup
     .string()
+    .max(30)
     .required(),
   email: yup
     .string()
+    .min(4)
+    .max(30)
     .email()
     .required(),
     message: yup
@@ -27,9 +31,11 @@ const initialValues = {
 
 const FeedbackForm = () => {
   const dispatch = useDispatch();
+  const navigate = useNavigate();
 
   const handleSubmit = (values, { resetForm }) => {
     dispatch(sendUserFeedback(values));
+    navigate('/read');
     resetForm();
   };
 

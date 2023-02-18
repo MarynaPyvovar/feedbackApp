@@ -9,3 +9,8 @@ const instance = axios.create({
 export async function postFeedback(req) {
   await instance.post(`/feedback`, req);
 }
+
+export async function getFeedback() {
+  const res = await instance.get(`/feedback`);
+  return res;
+}

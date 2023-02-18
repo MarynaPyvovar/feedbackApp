@@ -1,7 +1,7 @@
 import { ThreeCircles } from 'react-loader-spinner';
-import { LoaderWrapper } from './Loader.styled';
+import { LoaderWrapper, LoaderPageWrapper } from './Loader.styled';
 
-const Loader = () => {
+export const Loader = () => {
   return (
     <LoaderWrapper>
       <ThreeCircles
@@ -15,4 +15,14 @@ const Loader = () => {
   );
 };
 
-export default Loader;
+export const LoaderRoute = () => {
+  return <LoaderPageWrapper>
+    <ThreeCircles
+      height="80"
+      width="80"
+      color="#F472B7"
+      visible={true}
+      ariaLabel="three-circles-rotating"
+    />
+  </LoaderPageWrapper>
+}

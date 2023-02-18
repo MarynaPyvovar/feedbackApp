@@ -1,3 +1,3 @@
-import Loader from './Loader';
+import { Loader, LoaderRoute } from './Loader';
 
-export { Loader };
+export { Loader, LoaderRoute };

@@ -1,3 +1,4 @@
-import { FeedbackPage } from './Feedback';
+import { PostFeedbackPage } from './PostFeedback';
+import { ReadFeedbackPage } from './ReadFeedback';
 
-export { FeedbackPage };
+export { PostFeedbackPage, ReadFeedbackPage };

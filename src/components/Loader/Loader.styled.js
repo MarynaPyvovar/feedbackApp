@@ -5,5 +5,13 @@ export const LoaderWrapper = styled.div`
   height: 30px;
   display: flex;
   align-items: center;
-  justify-content: center
+  justify-content: center;
+`;
+
+export const LoaderPageWrapper = styled.div`
+  width: 50vw;
+  height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 `;
