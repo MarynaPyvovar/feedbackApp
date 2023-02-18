@@ -108,6 +108,7 @@ export const Cloud1 = styled.div`
   height: 200px;
   background-image: url(${cloud});
   background-size: cover;
+  opacity: 0.5;
   z-index: -1;
 `;
 
@@ -119,6 +120,7 @@ export const Cloud2 = styled.div`
   height: 100px;
   background-image: url(${cloud});
   background-size: cover;
+  opacity: 0.4;
   z-index: -1;
 `;
 
@@ -130,6 +132,7 @@ export const Cloud3 = styled.div`
   height: 128px;
   background-image: url(${cloud});
   background-size: cover;
+  opacity: 0.4;
   z-index: -1;
 `;
 
@@ -141,6 +144,7 @@ export const Cloud4 = styled.div`
   height: 164px;
   background-image: url(${cloud});
   background-size: cover;
+  opacity: 0.5;
   z-index: -1;
 `;
 
@@ -152,6 +156,7 @@ export const Cloud5 = styled.div`
   height: 164px;
   background-image: url(${cloud});
   background-size: cover;
+  opacity: 0.4;
   z-index: -1;
 `;
 
@@ -163,6 +168,7 @@ export const Cloud6 = styled.div`
   height: 184px;
   background-image: url(${cloud});
   background-size: cover;
+  opacity: 0.4;
   z-index: -1;
 `;
 
@@ -174,6 +180,7 @@ export const Cloud7 = styled.div`
   height: 103px;
   background-image: url(${cloud});
   background-size: cover;
+  opacity: 0.4;
   z-index: -1;
 
   @media (min-width: ${({ theme }) => theme.breakpoints.tablet}) {
