@@ -10,7 +10,7 @@ export const LoaderWrapper = styled.div`
 
 export const LoaderPageWrapper = styled.div`
   width: 50vw;
-  height: 70vh;
+  height: 50vh;
   display: flex;
   align-items: center;
   justify-content: center;

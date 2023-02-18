@@ -1,3 +1,4 @@
+import { LoaderRoute } from 'components';
 import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { getAllFeedback } from 'redux/feedback/feedbackOperations';
@@ -6,7 +7,7 @@ import { StyledHeading, StyledMessage } from './Feedback.styled';
 
 function Feedback() {
     const dispatch = useDispatch();
-    const { feedback } = useSelector(getFeed);
+    const { feedback, isLoading } = useSelector(getFeed);
 
     useEffect(() => {
       dispatch(getAllFeedback())
@@ -14,13 +15,15 @@ function Feedback() {
 
   return (
     <ul>
-      {feedback.length > 0 ?
+      {isLoading ?
+        <LoaderRoute /> :
+        feedback.length > 0 ?
           feedback.map(({ id, name, email, message }) => <li key={id}>
             <StyledHeading>{name}, {email}:</StyledHeading>
             <StyledMessage>{message}</StyledMessage>
           </li>) :
         <StyledHeading>
-            Nothing to read for now, so your feedback can be the first one!
+          Nothing to read for now, so your feedback can be the first one!
         </StyledHeading>}
     </ul>
   )

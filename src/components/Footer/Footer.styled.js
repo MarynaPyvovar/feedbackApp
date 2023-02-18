@@ -4,12 +4,13 @@ import yellow from '../../assets/backgrounds/yellow-up.svg';
 import green from '../../assets/backgrounds/green.svg';
 
 export const StyledFooter = styled.div`
-  position: relative;
+  position: fixed;
+  bottom: 0;
   width: 100%;
   padding: 60px 50px;
   background-color: ${({ theme }) => `${theme.colors.footerBack}`};
   border-top: 1px solid #d8d8d8;
-  overflow: hidden;
+  z-index: 5;
 
   @media (min-width: ${({ theme }) => theme.breakpoints.tablet}) {
     padding: 60px 100px;
@@ -62,10 +63,10 @@ export const StyledLink = styled.a`
   height: 15px;
   padding: 7px 10px;
   margin-right: 10px;
-  border-radius: 45%;
+  border-radius: 50%;
 
   &:hover,
   &:focus {
-    background-color: ${({ theme }) => `${theme.colors.yellow}`};
+    background-color: ${({ theme }) => `${theme.colors.border}`};
   }
 `;

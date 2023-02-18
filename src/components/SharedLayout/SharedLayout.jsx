@@ -24,8 +24,8 @@ function SharedLayout({children}) {
       <Cloud5 />
       <Cloud6 />
       <Cloud7 />
-      </Wrapper>
       <Footer />
+    </Wrapper>
     </>
   )
 }

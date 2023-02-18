@@ -9,7 +9,13 @@ import yelltr from '../../assets/backgrounds/yell-tr.png';
 export const Wrapper = styled.div`
   position: relative;
   width: 100vw;
-  overflow: hidden;
+  height: 100vh;
+  padding-bottom: 140px;
+  overflow-x: hidden;
+
+  @media (min-width: ${({ theme }) => theme.breakpoints.desktop}) {
+    padding-bottom: 160px;
+  }
 `;
 
 export const YellowUpDecorBall = styled.div`
